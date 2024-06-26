@@ -43,6 +43,6 @@
             <TextBlock x:Name="caloriesText" Margin="0,10,0,0" FontWeight="Bold"/>
             
             
-        </StackPanel>
+        </StackPanel> 
     </Grid>
 </Window>
