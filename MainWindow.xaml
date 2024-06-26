@@ -5,44 +5,74 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PROG_POE_3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Culinary Companion" Height="600" Width="1000"
+        Background="#F0F8FF">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!-- Menu -->
-        <Menu Grid.Row="0">
-            <MenuItem Header="File">
-                <MenuItem Header="Exit" Click="Exit_Click"/>
+        <Menu Grid.Row="0" Background="#4682B4">
+            <MenuItem Header="File" Foreground="White">
+                <MenuItem Header="Exit" Click="Exit_Click" Foreground="Black"/>
             </MenuItem>
-            <MenuItem Header="Recipe">
-                <MenuItem Header="New Recipe" Click="NewRecipe_Click"/>
-                <MenuItem Header="Display List" Click="DisplayList_Click"/>
-                <MenuItem Header="Scale Recipe" Click="ScaleRecipe_Click"/>
-                <MenuItem Header="Reset" Click="Reset_Click"/>
-                <MenuItem Header="Delete Recipe" Click="DeleteRecipe_Click"/>
+            <MenuItem Header="Recipe" Foreground="White">
+                <MenuItem Header="New Recipe" Click="NewRecipe_Click" Foreground="Black"/>
+                <MenuItem Header="Display List" Click="DisplayList_Click" Foreground="Black"/>
+                <MenuItem Header="Scale Recipe" Click="ScaleRecipe_Click" Foreground="Black"/>
+                <MenuItem Header="Reset" Click="Reset_Click" Foreground="Black"/>
+                <MenuItem Header="Delete Recipe" Click="DeleteRecipe_Click" Foreground="Black"/>
             </MenuItem>
-            <MenuItem Header="Filter">
-                <MenuItem Header="By Ingredient" Click="FilterByIngredient_Click"/>
-                <MenuItem Header="By Food Group" Click="FilterByFoodGroup_Click"/>
-                <MenuItem Header="By Max Calories" Click="FilterByMaxCalories_Click"/>
+            <MenuItem Header="Filter" Foreground="White">
+                <MenuItem Header="By Ingredient" Click="FilterByIngredient_Click" Foreground="Black"/>
+                <MenuItem Header="By Food Group" Click="FilterByFoodGroup_Click" Foreground="Black"/>
+                <MenuItem Header="By Max Calories" Click="FilterByMaxCalories_Click" Foreground="Black"/>
             </MenuItem>
         </Menu>
 
-        <!-- Recipe List -->
-        <ListBox x:Name="recipeListBox" Grid.Row="1" Margin="10" SelectionChanged="RecipeListBox_SelectionChanged"/>
+        <!-- Main Content -->
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
 
-        <!-- Recipe Details -->
-        <StackPanel x:Name="recipeDetailsPanel" Grid.Row="2" Margin="10" Visibility="Collapsed">
-            <TextBlock x:Name="recipeNameText" FontSize="18" FontWeight="Bold"/>
-            <TextBlock x:Name="ingredientListText" Margin="0,10,0,0"/>
-            <TextBlock x:Name="stepsText" Margin="0,10,0,0"/>
-            <TextBlock x:Name="caloriesText" Margin="0,10,0,0" FontWeight="Bold"/>
-            
-            
-        </StackPanel> 
+            <!-- Recipe List -->
+            <Border Grid.Column="0" BorderBrush="#4682B4" BorderThickness="1" CornerRadius="5">
+                <StackPanel>
+                    <TextBlock Text="Recipe List" FontSize="18" FontWeight="Bold" Margin="10" Foreground="#4682B4"/>
+                    <ListBox x:Name="recipeListBox" Height="400" Margin="10" SelectionChanged="RecipeListBox_SelectionChanged"
+                             BorderBrush="#4682B4" BorderThickness="1" Foreground="Black">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" Padding="5"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </Border>
+
+            <!-- Separator -->
+            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Center" VerticalAlignment="Stretch" Background="#4682B4"/>
+
+            <!-- Recipe Details -->
+            <Border Grid.Column="2" BorderBrush="#4682B4" BorderThickness="1" CornerRadius="5">
+                <StackPanel x:Name="recipeDetailsPanel" Margin="20" Visibility="Collapsed">
+                    <TextBlock Text="Recipe Details" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" Foreground="#4682B4"/>
+                    <TextBlock x:Name="recipeNameText" FontSize="20" FontWeight="Bold" Foreground="#2E8B57"/>
+                    <Separator Margin="0,10"/>
+                    <TextBlock Text="Ingredients:" FontWeight="Bold" Margin="0,10,0,5" Foreground="#1E90FF"/>
+                    <TextBlock x:Name="ingredientListText" TextWrapping="Wrap" Foreground="Black"/>
+                    <Separator Margin="0,10"/>
+                    <TextBlock Text="Steps:" FontWeight="Bold" Margin="0,10,0,5" Foreground="#1E90FF"/>
+                    <TextBlock x:Name="stepsText" TextWrapping="Wrap" Foreground="Black"/>
+                    <Separator Margin="0,10"/>
+                    <TextBlock x:Name="caloriesText" FontWeight="Bold" Foreground="#B22222" Margin="0,10,0,0"/>
+                </StackPanel>
+            </Border>
+        </Grid>
     </Grid>
 </Window>
