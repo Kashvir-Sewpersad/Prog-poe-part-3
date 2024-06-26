@@ -13,7 +13,7 @@ namespace PROG_POE_3.Properties
 
 
 
-        private string recipeName;
+        private string recipeName; // variable instanciation 
 
         public ScaleRecipeForm(FunctionalityClass functionalityClass, string recipe)
         {
@@ -21,7 +21,7 @@ namespace PROG_POE_3.Properties
 
             fc = functionalityClass;
 
-            recipeName = recipe;
+            recipeName = recipe; // instanciation
             
         }
 
@@ -29,9 +29,9 @@ namespace PROG_POE_3.Properties
         {
             if (int.TryParse(txtScaleFactor.Text, out int scaleFactor))
             {
-                fc.ScaleRecipe(recipeName, scaleFactor);
+                fc.ScaleRecipe(recipeName, scaleFactor); //  accessing the scale factor 
 
-                MessageBox.Show("Recipe scaled successfully.");
+                MessageBox.Show("Recipe scaled successfully."); //  output message if scaled properly
 
                 this.Close(); // call to internal close 
             }
@@ -42,3 +42,5 @@ namespace PROG_POE_3.Properties
         }
     }
 }
+
+//***************************************** end of file *********************************//
