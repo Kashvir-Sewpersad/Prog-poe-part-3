@@ -44,7 +44,7 @@ Closing the Program:
 * Option 2: Navigate to the "File" tab and select "Exit."
 
 ## Changes Based on Feedback
-[Briefly describe (100-200 words) what you changed based on your lecturer's feedback from Part 2]
+I've built a GUI  to the POE guidelines, prioritizing user friendliness. It includes serveral informative messages for understanding recipe calorie content and makes use of color-coded outputs to enhance clarity. These features are set to improve the  recipe  app, providing easy movement and clear feedback.
 
 ## GitHub Repository
 https://github.com/Kashvir-Sewpersad/Prog-poe-part-3.git
