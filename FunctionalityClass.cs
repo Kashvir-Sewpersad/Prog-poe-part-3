@@ -4,6 +4,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Windows;
 
 
 namespace PROG_POE_3
@@ -13,6 +15,17 @@ namespace PROG_POE_3
     ///  st10257503   
     ///  Prog poe part 3/ POE
     ///  IIE VC NEWLANDS 
+    ///  github repo link :https://github.com/Kashvir-Sewpersad/Prog-poe-part-3.git
+    ///  refrences 
+    ///  Programming With Mosh. (2016, April 3). C# Tutorial For Beginners - Learn C# Basics in 1 Hour [Video]. YouTube. https://www.youtube.com/watch?v=gfkTfcpWqAY
+    ///  Payload. (2021, April 3). WPF C# Professional Modern Flat UI Tutorial [Video]. YouTube. https://www.youtube.com/watch?v=PzP8mw7JUzI
+    /// ProgrammingKnowledge. (2013, June 20). C# WPF Tutorial 1- Getting Started and Creating Your First Application [Video]. YouTube. https://www.youtube.com/watch?v=krxYDsee2cQ
+    ///ProgrammingKnowledge. (2013b, June 23). C# WPF Tutorial 2- Adding Image to WPF C# application (Image control , background image) [Video]. YouTube. https://www.youtube.com/watch?v=affbgRZoeGc
+    ///ToskersCorner. (2016, November 11). C# WPF Tutorial - Text Block & Text Box [Video]. YouTube. https://www.youtube.com/watch?v=685DjWN_7JU
+    ///Coding Under Pressure. (2020, February 11). How to Open A New Pop up Window WPF C#   WPF Tutorial Part 6 [Video]. YouTube. https://www.youtube.com/watch?v=KSNjJ9Glky4
+    /// Coding Under Pressure. (2020b, March 15). Make Style Changes Application Wide in WPF Change the Default Style of an Element WPF Tutorial[Video]. YouTube.https://www.youtube.com/watch?v=l9CE69JUU3U
+
+
     /// </summary> 
     public class FunctionalityClass
     {
