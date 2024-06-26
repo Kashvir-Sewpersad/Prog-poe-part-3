@@ -1,0 +1,77 @@
+﻿using System;
+using CARLOS;
+
+public class Class1
+{
+    public class FunctionalityClass
+    {
+        private List<Recipe> recipes;
+
+        public FunctionalityClass()
+        {
+            recipes = new List<Recipe>();
+        }
+
+        public void AddRecipe(Recipe recipe)
+        {
+            recipes.Add(recipe);
+        }
+
+        public List<string> GetRecipeNames()
+        {
+            return recipes.Select(r => r.Name).ToList();
+        }
+
+        public Recipe GetRecipe(string recipeName)
+        {
+            return recipes.FirstOrDefault(r => r.Name == recipeName);
+        }
+
+        public void ScaleRecipe(string recipeName, int scaleFactor)
+        {
+            Recipe recipe = GetRecipe(recipeName);
+            if (recipe != null)
+            {
+                foreach (var ingredient in recipe.Ingredients)
+                {
+                    ingredient.Quantity *= scaleFactor;
+                }
+            }
+        }
+
+        public void Reset()
+        {
+            recipes.Clear();
+        }
+
+        public void DeleteRecipe(string recipeName)
+        {
+            Recipe recipe = GetRecipe(recipeName);
+            if (recipe != null)
+            {
+                recipes.Remove(recipe);
+            }
+        }
+
+        public List<string> FilterRecipesByIngredient(string ingredientName)
+        {
+            return recipes.Where(r => r.Ingredients.Any(i => i.Name.Equals(ingredientName, StringComparison.OrdinalIgnoreCase)))
+                          .Select(r => r.Name)
+                          .ToList();
+        }
+
+        public List<string> FilterRecipesByFoodGroup(string foodGroup)
+        {
+            return recipes.Where(r => r.Ingredients.Any(i => i.FoodGroup.Equals(foodGroup, StringComparison.OrdinalIgnoreCase)))
+                          .Select(r => r.Name)
+                          .ToList();
+        }
+
+        public List<string> FilterRecipesByMaxCalories(int maxCalories)
+        {
+            return recipes.Where(r => r.TotalCalories <= maxCalories)
+                          .Select(r => r.Name)
+                          .ToList();
+        }
+    }
+}

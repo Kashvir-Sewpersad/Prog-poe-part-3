@@ -1,0 +1,24 @@
+﻿<Window x:Class="PROG_POE_3.Properties.FoodGroupForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FoodGroupForm" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Food Group:" Grid.Row="0"/>
+        <ComboBox x:Name="cmbFoodGroup" Grid.Row="0">
+            <ComboBoxItem>Vegetables</ComboBoxItem>
+            <ComboBoxItem>Fruits</ComboBoxItem>
+            <ComboBoxItem>Grains</ComboBoxItem>
+            <ComboBoxItem>Proteins</ComboBoxItem>
+            <ComboBoxItem>Dairy</ComboBoxItem>
+            <ComboBoxItem>Fats</ComboBoxItem>
+        </ComboBox>
+
+        <Button Content="Select" Grid.Row="1" Click="Select_Click"/>
+    </Grid>
+</Window>
