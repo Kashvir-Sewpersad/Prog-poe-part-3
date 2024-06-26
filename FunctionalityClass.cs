@@ -8,10 +8,12 @@ using System.Linq;
 
 namespace PROG_POE_3
 {
-    /// <summary>
-    ///  Kashvir Sewpersad
-    ///  st10257503
-    /// </summary>
+    /// <summary> 
+    ///  Kashvir Sewpersad  
+    ///  st10257503   
+    ///  Prog poe part 3/ POE
+    ///  IIE VC NEWLANDS 
+    /// </summary> 
     public class FunctionalityClass
     {
         private List<Recipe> recipes; // list to store recipe 
