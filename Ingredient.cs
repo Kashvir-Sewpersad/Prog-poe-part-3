@@ -27,7 +27,6 @@ namespace PROG_POE_3
             Quantity = quantity;
 
             Unit = unit;
-
             FoodGroup = foodGroup;
 
             Calories = calories;
