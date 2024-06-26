@@ -57,6 +57,14 @@ https://github.com/Kashvir-Sewpersad/Prog-poe-part-3.git
 Challenges with foodGroup:
 * Despite including the necessary functionality and methods for foodGroup, there are numerous runtime errors.
 * Due to these issues, the foodGroup feature has been temporarily disabled.
-* The rest of the program remains fully functional. 
+* The rest of the program remains fully functional.
+
+  ## Screenshots
+   Commit history
+![Screenshot (169)](https://github.com/Kashvir-Sewpersad/Prog-poe-part-3/assets/125659297/6f380b3f-2106-4a09-a46b-48634599657d)
+
+tag
+
+![Screenshot (170)](https://github.com/Kashvir-Sewpersad/Prog-poe-part-3/assets/125659297/22fa94be-4cb4-48d0-8954-96117d92e285)
 
 ## Thank you for making it to the end of my ReadMe
